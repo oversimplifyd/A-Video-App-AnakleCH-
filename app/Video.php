@@ -12,16 +12,7 @@ class Video extends Model
      * @var array
      */
     protected $fillable = [
-        'first_name', 'last_name', 'oauth_token', 'email', 'password',
-    ];
-
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
+        'title', 'description', 'category', 'url',
     ];
 
     /**
