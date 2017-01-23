@@ -55,11 +55,14 @@ class SMAuthController extends Controller
         if ( ! is_null($userInstance->oauth_id))
             return $userInstance;
 
+        var_dump($userInstance); exit;
+        
+        $names = explode(" ", $user->name);
         $userInstance->oauth_id = $user->token;
-        $userInstance->first_name = "kdkdkd";
-        $userInstance->last_name = "ddfdfd";
+        $userInstance->first_name = $names[0];
+        $userInstance->last_name = $names[1];
         $userInstance->email = $user->email;
-        $userInstance->username = $user->token;
+        $userInstance->username = $names[0].$user->token;
         $userInstance->save();
 
         return $userInstance;
