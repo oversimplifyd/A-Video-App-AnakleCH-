@@ -53,7 +53,7 @@ class SMAuthController extends Controller
     {
 
         $existingUser = User::where('oauth_id', $user->token)->first();
-        if ($existingUser->count() > 0)
+        if (! is_null($existingUser))
             return $existingUser;
 
         //$userInstance = User::firstOrNew(['oauth_id' => $user->token]);
