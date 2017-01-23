@@ -100,8 +100,8 @@
                     </div>
                 @endforeach
             </div>
-        
-            @if($videos->links())
+
+            @if(method_exists($videos, "links"))
                 <div id="links">{{$videos->links()}}</div>
             @endif
         @else
