@@ -49,7 +49,7 @@
                                 <div class="form-group">
                                     <label for="url" class="control-label col-sm-4 ">Embed URL</label>
                                     <div class="col-sm-8">
-                                        <input name="url" class="form-control" value="{{ old('url')}}" required>
+                                        <input name="url" class="form-control" placeholder="Add Video fully qualified URL" value="{{ old('url')}}" required>
                                     </div>
                                 </div>
 

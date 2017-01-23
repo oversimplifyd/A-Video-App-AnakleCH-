@@ -34,7 +34,7 @@
                     <p>{{$video->description}}</p>
                 </div>
                 <div id="video-frame">
-                    <iframe src="http://www.youtube.com/embed/oHg5SJYRHA0?autoplay=1" align="middle" frameborder="0" allowfullscreen></iframe>
+                    <iframe src="{{$video->url}}" align="middle" frameborder="0" allowfullscreen></iframe>
                     <p><span>Uploaded by: {{str_limit("{$video->user->first_name} {$video->user->last_name}", $limit = 20, $end = '...')}}</span>, {{$video->created_at->diffForHumans()}}</p>
                 </div>
             </div>

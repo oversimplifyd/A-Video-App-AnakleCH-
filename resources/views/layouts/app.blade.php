@@ -53,8 +53,9 @@
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="{{ url('/user/edit') }}"><i class="fa fa-btn fa-sign-out"></i>Manage Profile</a></li>
-                            <li><a href="{{ url('/user/videos') }}"><i class="fa fa-btn fa-sign-out"></i>My Videos</a></li>
+                            <li><a href="{{ url('/user/edit') }}"><i class="fa fa-btn fa-user"></i>Manage Profile</a></li>
+                            <li><a href="{{ url('/videos/create') }}"><i class="fa fa-btn fa-sign-out"></i>Add Video</a></li>
+                            <li><a href="{{ url('/user/videos') }}"><i class="fa fa-btn fa-eye"></i>My Videos</a></li>
                             <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                         </ul>
                     </li>
