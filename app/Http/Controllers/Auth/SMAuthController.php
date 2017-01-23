@@ -55,7 +55,7 @@ class SMAuthController extends Controller
         if ( ! is_null($userInstance->oauth_id))
             return $userInstance;
 
-        $names = explode($user->name, " ");
+        $names = explode(" ", $user->name);
 
         $userInstance->oauth_id = $user->token;
         $userInstance->first_name = $names[0];
