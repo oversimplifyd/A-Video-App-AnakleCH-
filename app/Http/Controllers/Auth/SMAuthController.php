@@ -61,7 +61,7 @@ class SMAuthController extends Controller
         $userInstance->first_name = $names[0];
         $userInstance->last_name = $names[1];
         $userInstance->email = $user->email;
-        $userInstance->username = $user->user->login;
+        $userInstance->username = $names[0].$user->token;
         $userInstance->save();
 
         return $userInstance;
