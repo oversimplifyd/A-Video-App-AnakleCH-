@@ -51,12 +51,15 @@ class SMAuthController extends Controller
 
     public function findBySocialMedia($user)
     {
+
+        $existingUser = User::where('oauth_id', $user->token)->first();
+        if ($existingUser->count() > 0)
+            return $existingUser;
+
         //$userInstance = User::firstOrNew(['oauth_id' => $user->token]);
        /* if ( ! is_null($userInstance->oauth_id))
             return $userInstance;*/
-
-        var_dump($user); exit;
-
+        $userInstance = new User();
         $names = explode(" ", $user->name);
         $userInstance->oauth_id = $user->token;
         $userInstance->first_name = $names[0];
