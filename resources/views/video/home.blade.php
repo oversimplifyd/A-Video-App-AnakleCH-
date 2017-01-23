@@ -100,8 +100,10 @@
                     </div>
                 @endforeach
             </div>
-
-            <div id="links">{{$videos->links()}}</div>
+        
+            @if($videos->links())
+                <div id="links">{{$videos->links()}}</div>
+            @endif
         @else
             <p><strong>There are no videos available...</strong></p>
         @endif

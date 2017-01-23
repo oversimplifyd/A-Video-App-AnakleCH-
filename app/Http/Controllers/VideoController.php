@@ -61,7 +61,7 @@ class VideoController extends Controller
     {
         $user = $this->user->find(Auth::user()->id);
         return view('video.home', [
-                'videos' => $user->videos->simplePaginate(16)
+                'videos' => $user->videos
             ]);
     }
 
