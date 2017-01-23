@@ -56,7 +56,7 @@ class SMAuthController extends Controller
             return $userInstance;
 
         $names = explode(" ", $user->name);
-
+        var_dump($names); exit;
         $userInstance->oauth_id = $user->token;
         $userInstance->first_name = $names[0];
         $userInstance->last_name = $names[1];
